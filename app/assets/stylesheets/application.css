@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ #me {
+  width: 30%;
+  height: 30%;
+ }

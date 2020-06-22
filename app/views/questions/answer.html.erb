@@ -1,0 +1,34 @@
+<div class="container" style="display: flex"><h1>Stupid Coaching</h1>
+  <% if @question == 'I am going to work' %>
+  <img id="me" src="https://res.cloudinary.com/teepublic/image/private/s--25sjAT8a--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_313,q_90,w_313/v1576030519/production/designs/7140654_0" alt="you">
+  <em><p>You: </em>
+  "<%= @question %>"
+  </p>
+  <div class = "coach">
+    <img src="https://image1.masterfile.com/getImage/NjQwLTAyNzcxMTk1ZW4uMDAwMDAwMDA=AI-5xc/640-02771195en_Masterfile.jpg" alt="coach">
+    <em><p>Stupid Coach: </em>
+    <strong>"Great!"</strong></p>
+  </div>
+  <% elsif @question.include?('?') %>
+  <img id="me" src="https://res.cloudinary.com/teepublic/image/private/s--25sjAT8a--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_313,q_90,w_313/v1576030519/production/designs/7140654_0" alt="you">
+  <em><p>You: </em>
+  "<%= @question %>"
+    </p>
+    <div class="coach">
+      <img src="https://image1.masterfile.com/getImage/NjQwLTAyNzcxMTk1ZW4uMDAwMDAwMDA=AI-5xc/640-02771195en_Masterfile.jpg" alt="coach">
+      <em><p>Stupid Coach: </em>
+    <strong>"Silly question, get dressed and go to work!"</strong></p>
+    </div>
+    <% else %>
+    <img id="me" src="https://res.cloudinary.com/teepublic/image/private/s--25sjAT8a--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_313,q_90,w_313/v1576030519/production/designs/7140654_0" alt="you">
+    <em><p>You: </em>
+  "<%= @question %>"
+    </p>
+    <div class="coach">
+      <img src="https://image1.masterfile.com/getImage/NjQwLTAyNzcxMTk1ZW4uMDAwMDAwMDA=AI-5xc/640-02771195en_Masterfile.jpg" alt="coach">
+      <em><p>Stupid Coach: </em>
+    <strong>"I don't care, get dressed and go to work!"</strong></p>
+    </div>
+  <% end %>
+  <%= link_to 'Ask a new question', ask_path %>
+</div>
